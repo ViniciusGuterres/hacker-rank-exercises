@@ -3,14 +3,12 @@ function mix(s1, s2) {
     let s1AmountOfLettersObj = loopLetter(s1);
     let s2AmountOfLettersObj = loopLetter(s2);
 
-    console.log('s1::', s1AmountOfLettersObj);
-    console.log('s2::', s2AmountOfLettersObj);
 }
 
 function loopLetter(stringL) {
     let obj = {};
 
-
+    console.log()
     for (let i = 0; i < stringL.length; i++) {
         let letterRow = stringL[i];
 
