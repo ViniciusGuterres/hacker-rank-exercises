@@ -5,7 +5,7 @@ function gradingStudents(grades) {
     }
     
     const roundedGrades = grades.map(grade => {
-        // Case grade is less than 40, don't round it
+        // Case grade is less than 38, don't round it
         if (grade < 38) {
             return grade;
         }
@@ -21,6 +21,7 @@ function gradingStudents(grades) {
     });
 
     return roundedGrades;
+    //Expected OutPut: [ 75, 67, 40, 33 ]
 }
 
 console.log(gradingStudents([ 73, 67, 38, 33 ]));
