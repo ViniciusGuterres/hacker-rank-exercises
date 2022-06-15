@@ -1,4 +1,4 @@
-LINK: https://www.hackerrank.com/challenges/cats-and-a-mouse/problem?isFullScreen=true
+LINK: https://www.hackerrank.com/challenges/cats-and-a-mouse/problem
 
 Two cats and a mouse are at various positions on a line. 
 You will be given their starting positions. 
