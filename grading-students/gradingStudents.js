@@ -1,5 +1,6 @@
 function gradingStudents(grades) {
-
+    
+    // round number to the next multiple of five
     const roundToNextMultipleOfFive = (number) => {
         return Math.ceil(number / 5) * 5;
     }
