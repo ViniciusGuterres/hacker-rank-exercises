@@ -13,6 +13,7 @@ function birthdayCakeCandles(candles) {
     const amountBiggestCandle = candles.filter(candle => candle == biggestCandle);
 
     return amountBiggestCandle?.length;
+    // Expect OutPut: 2
 }
 
 console.log("🚀 ~ file: birthCake.js ~ line 6 ~ birthdayCakeCandles:::", birthdayCakeCandles([ 3, 2, 1, 3 ]))
