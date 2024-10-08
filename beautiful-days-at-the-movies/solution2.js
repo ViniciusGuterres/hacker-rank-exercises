@@ -6,25 +6,19 @@ function beautifulDays(initialDay, finalDay, divisor) {
     // Filtering the beautiful days based on the math clauses
     const myBeautifulDaysArr = myRangeOfDays.filter(currentDay => {
         const reversedNumber = reverse(currentDay);
+
+        // Calculate the absolute difference between the current day and the reversed number
         const reverseAndCurrentDayDifference = Math.abs(reversedNumber - currentDay);
 
-        if (reverseAndCurrentDayDifference % divisor === 0) {
-            return currentDay;
-        }
+        // Check if the difference is divisible by the divisor without a remainder.
+        return reverseAndCurrentDayDifference % divisor === 0;
     });
 
     return myBeautifulDaysArr.length;
 }
 
 function reverse(myNumber) {
-    const reversedStr =
-        myNumber
-            .toString()
-            .split('')
-            .reverse()
-            .join('');
-
-    return parseInt(reversedStr)
+    return Number(myNumber.toString().split('').reverse().join(''));
 }
 
 // Input 20, 23, 6
