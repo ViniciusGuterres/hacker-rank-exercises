@@ -1,0 +1,11 @@
+# Challenge link: https://www.hackerrank.com/challenges/strange-code/problem?isFullScreen=false
+
+# Challenge description:
+    There is a strange counter. At the first second, it displays the number 3.
+
+    Each second, the number displayed by decrements by 1 until it reaches 1. In next second, the timer resets to 2x the initial number for the prior cycle and continues counting down.
+    
+    The diagram below shows the counter values for each time t in the first three cycles:
+
+
+    Find and print the value displayed by the counter at time t.
