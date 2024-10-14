@@ -1,9 +1,10 @@
-// This solutions only works with safe integer numbers
-function taumBday(blackGiftTotal, whiteGiftTotal, blackGiftPrice, whiteGiftPrice, tradePrice) {
-    let blackGiftCost = Math.min(blackGiftPrice, whiteGiftPrice + tradePrice);    
-    let whiteGiftCost = Math.min(whiteGiftPrice, blackGiftPrice + tradePrice);
+// This solution only works with safe integer numbers
+// calculateMinGiftCost
+function taumBday(totalBlackGifts, totalWhiteGifts, priceBlackGift, priceWhiteGift, exchangeCost) {
+    const blackGiftCost = Math.min(priceBlackGift, priceWhiteGift + exchangeCost);    
+    const whiteGiftCost = Math.min(priceWhiteGift, priceBlackGift + exchangeCost);
 
-    return blackGiftCost * blackGiftTotal + whiteGiftTotal * whiteGiftCost;
+    return blackGiftCost * totalBlackGifts + totalWhiteGifts * whiteGiftCost;
 }
 
 const b = 3;
