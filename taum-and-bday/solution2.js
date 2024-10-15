@@ -1,7 +1,13 @@
 // This solution only works with safe integer numbers
 // calculateMinGiftCost
-function taumBday(totalBlackGifts, totalWhiteGifts, priceBlackGift, priceWhiteGift, exchangeCost) {
-    const blackGiftCost = Math.min(priceBlackGift, priceWhiteGift + exchangeCost);    
+function taumBday(
+    totalBlackGifts,
+    totalWhiteGifts,
+    priceBlackGift,
+    priceWhiteGift,
+    exchangeCost
+) {
+    const blackGiftCost = Math.min(priceBlackGift, priceWhiteGift + exchangeCost);
     const whiteGiftCost = Math.min(priceWhiteGift, priceBlackGift + exchangeCost);
 
     return blackGiftCost * totalBlackGifts + totalWhiteGifts * whiteGiftCost;
