@@ -5,8 +5,11 @@ function taumBday(blackGiftTotal, whiteGiftTotal, blackGiftPrice, whiteGiftPrice
     whiteGiftPrice = BigInt(whiteGiftPrice);
     tradePrice = BigInt(tradePrice);
 
-    let blackGiftCost = (whiteGiftPrice + tradePrice) < blackGiftPrice ? whiteGiftPrice + tradePrice : blackGiftPrice;
-    let whiteGiftCost = (blackGiftPrice + tradePrice) < whiteGiftPrice ? blackGiftPrice + tradePrice : whiteGiftPrice;
+    let blackGiftCost = 
+        (whiteGiftPrice + tradePrice) < blackGiftPrice ? whiteGiftPrice + tradePrice : blackGiftPrice;
+        
+    let whiteGiftCost =
+        (blackGiftPrice + tradePrice) < whiteGiftPrice ? blackGiftPrice + tradePrice : whiteGiftPrice;
 
     const totalCost = blackGiftCost * blackGiftTotal + whiteGiftTotal * whiteGiftCost;
 

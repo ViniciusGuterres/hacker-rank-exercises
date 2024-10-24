@@ -1,18 +1,17 @@
 function taumBday(blackGiftTotal, whiteGiftTotal, blackGiftPrice, whiteGiftPrice, tradePrice) {
-    blackGiftTotal = blackGiftTotal
-    whiteGiftTotal = whiteGiftTotal 
-    blackGiftPrice = blackGiftPrice 
-    whiteGiftPrice = whiteGiftPrice
-    tradePrice = tradePrice;
+    const blackGiftCost = 
+        (whiteGiftPrice + tradePrice) < blackGiftPrice ? whiteGiftPrice + tradePrice : blackGiftPrice;
 
-    let blackGiftCost = (whiteGiftPrice + tradePrice) < blackGiftPrice ? whiteGiftPrice + tradePrice : blackGiftPrice;
-    let whiteGiftCost = (blackGiftPrice + tradePrice) < whiteGiftPrice ? blackGiftPrice + tradePrice : whiteGiftPrice;
+    const whiteGiftCost = 
+        (blackGiftPrice + tradePrice) < whiteGiftPrice ? blackGiftPrice + tradePrice : whiteGiftPrice;
 
     let totalCost = blackGiftCost * blackGiftTotal + whiteGiftTotal * whiteGiftCost;
     
     if (!Number.isSafeInteger(totalCost)) {
-        totalCost = BigInt(blackGiftCost) * BigInt(blackGiftTotal) + BigInt(whiteGiftTotal) * BigInt(whiteGiftCost);
-        totalCost.toString();
+        totalCost = 
+            BigInt(blackGiftCost) * BigInt(blackGiftTotal) + BigInt(whiteGiftTotal) * BigInt(whiteGiftCost);
+        
+        totalCost = totalCost.toString();
     }
 
     return totalCost;
