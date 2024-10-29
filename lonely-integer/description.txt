@@ -1,0 +1,9 @@
+# Challenge link: https://www.hackerrank.com/challenges/lonely-integer/problem?isFullScreen=true
+
+# Problem description:
+    Given an array of integers, where all elements but one occur twice, find the unique element.
+
+# Example:
+    a = [1, 2, 2, 4, 3, 1, 3]
+
+    The unique element is 4.
